@@ -1,9 +1,10 @@
 const express = require('express');
+require('dotenv').config();
 
 const app = express();
 
 app.get('/', (req, res) => {
-    res.send('<h1>My Node App </h1>');
+    res.send(`<h1>My Node App -> ${process.env.TESTE}</h1>`);
 });
 
 app.get('/teste', (req, res) => {
